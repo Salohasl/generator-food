@@ -2,52 +2,52 @@ export default [
     {
       "id":"1",
       "name":"Вок",
-      "src":"/dist/img/wok.jpg"
+      "src":"/src/images/wok.jpg"
     },
     {
       "id":"2",
       "name":"Плов",
-      "src":"/dist/img/plov.jpg"
+      "src":"/src/images/plov.jpg"
     },
     {
       "id":"3",
       "name":"Гречка",
-      "src":"/dist/img/gr.jpg"
+      "src":"/src/images/gr.jpg"
     },
     {
       "id":"4",
       "name":"Макароны",
-      "src":"/dist/img/mak.jpg"
+      "src":"/src/images/mak.jpg"
     },
     {
       "id":"5",
       "name":"Жаркое",
-      "src":"/dist/img/jar.jpg"
+      "src":"/src/images/jar.jpg"
     },
     {
       "id":"6",
       "name":"Жаренная картошка",
-      "src":"/dist/img/cart.jpg"
+      "src":"/src/images/cart.jpg"
     },
     {
       "id":"7",
       "name":"Пюре",
-      "src":"/dist/img/pure.jpg"
+      "src":"/src/images/pure.jpg"
     },
     {
       "id":"8",
       "name":"Креативчик(что-то новое)",
-      "src":"/dist/img/hz.jpg"
+      "src":"/src/images/hz.jpg"
     },
     {
       "id":"9",
       "name":"Пицца",
-      "src":"/dist/img/pizza.jpg"
+      "src":"/src/images/pizza.jpg"
     },
     {
       "id":"10",
       "name":"Шаурма",
-      "src":"/dist/img/shaur.jpg"
+      "src":"/src/images/shaur.jpg"
     }    
 ];
 

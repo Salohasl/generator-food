@@ -1,4 +1,5 @@
 import arrFood from './foodArray';
+import './styles1.scss';
 /*Выбор данных из массива объектов*/
 
 const textMan: Element = document.querySelector('.text');

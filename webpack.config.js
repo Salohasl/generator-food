@@ -1,7 +1,31 @@
 const path = require('path');
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
+  output: {
+    filename: 'script.[contenthash].js',
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'template.html'),
+      filename: 'index.html',
+    }),
+    new FileManagerPlugin({
+      events: {
+        onStart: {
+          delete: ['dist'],
+        },
+      },
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'build.css'
+    })
+],
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -10,17 +34,25 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      { 
-        test: /\.css$/, 
-        use: [ 'style-loader', 'css-loader' ]
-      }
+      {
+        test: /\.(scss|css)$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader',
+				],
+			},
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/inline',
+      },
     ],
+  },
+  devServer: {
+    watchFiles: path.join(__dirname, 'src'),
+    port: 8080,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-  },
-  output: {
-    filename: 'script.js',
-    path: path.resolve(__dirname, 'dist'),
   },
 };
