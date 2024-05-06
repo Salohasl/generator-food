@@ -3,7 +3,7 @@
 
 ---
 
-<h2>Dish selection generator (20% developed)</h2>
+<h2>Dish selection generator (23% developed)</h2>
 
 :hammer_and_wrench: Languages and Tools :
 <div>
